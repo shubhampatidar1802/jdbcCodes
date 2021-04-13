@@ -12,6 +12,17 @@ public class DataEntry {
             System.out.println("Driver Loaded");
             Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/data1","root","");
             System.out.println("Connected Succefully");
+            
+           String sql="INSERT INTO student VALUES(112,'rahul',100000);";
+            
+           Statement stmt = con.createStatement();
+           
+           int n=stmt.executeUpdate(sql);
+           
+           con.close();
+           
+            System.out.println(n+" Row ADDED");
+            
         } catch (ClassNotFoundException ex) {
            ex.printStackTrace();
 //            System.out.println("Driver Not Loaded");
