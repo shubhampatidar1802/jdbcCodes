@@ -13,7 +13,7 @@ public class DataEntry {
             Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/data1","root","");
             System.out.println("Connected Succefully");
             
-           String sql="INSERT INTO student VALUES(112,'rahul',100000);";
+           String sql="INSERT INTO student VALUES(112,'SHUBHAM',100000);";
             
            Statement stmt = con.createStatement();
            
